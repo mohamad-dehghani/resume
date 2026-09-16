@@ -3,195 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <title>تدریس — دوره‌ها و کارگاه‌ها</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <style>
   :root{
-    --bg: #EAE3D9;
-    --ink: #202A33;
-    --ink-soft: #5B5449;
-    --line: #A6673D;
-    --outline: rgba(32,42,51,0.08);
-  }
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html,body{ background:#d8d2c6; }
-  .canvas{
-    width: 1080px;
-    min-height: 1920px;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .watermark{
-    position: absolute;
-    top: 90px;
-    right: 5px;
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 300px;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--outline);
-    letter-spacing: -6px;
-    user-select: none;
-  }
-
-  .chapter-tag{
-    position: absolute;
-    top: 120px;
-    left: 90px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-  .chapter-tag .rule{ width:1px; height:100px; background: var(--ink); opacity:0.55; }
-  .chapter-tag .label{
-    writing-mode: vertical-rl;
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: var(--ink-soft);
-    font-weight: 300;
-  }
-
-  .content-top{
-    margin-top: 310px;
-    padding: 0 90px;
-    text-align: right;
-  }
-  .content-top .eyebrow{
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--line);
-    margin-bottom: 14px;
-    letter-spacing: 1px;
-  }
-  .content-top h1{
-    font-size: 44px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-  }
-
-  .orgs{
-    margin-top: 44px;
-    padding: 0 90px;
-  }
-
-  .org-block{
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(32,42,51,0.18);
-  }
-  .org-head{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    margin-bottom: 10px;
-  }
-  .org-name{
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-  .org-meta{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-  .org-count{
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--bg);
-    background: var(--line);
-    padding: 4px 11px;
-    border-radius: 100px;
-    white-space: nowrap;
-  }
-  .org-loc{
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink-soft);
-    white-space: nowrap;
-  }
-
-  .course-single{
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--ink-soft);
-  }
-  .course-single .yr{
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    color: var(--line);
-    margin-left: 6px;
-    direction: ltr;
-    display: inline-block;
-  }
-
-  .course-list{
-    padding-right: 4px;
-  }
-  .course-list .c{
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--ink-soft);
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .course-list .c .yr{
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    color: var(--line);
-    font-size: 15px;
-    direction: ltr;
-    flex-shrink: 0;
-  }
-
-  .bottom{
-    margin-top: auto;
-    padding: 50px 90px 80px 90px;
-  }
-  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 36px; }
-  .icon-row .rule{ width:1px; height:130px; background: var(--ink); opacity:0.3; }
-  .icon-box{ width:130px; height:130px; }
-  .icon-box svg{ width:100%; height:100%; }
-
-  .footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer .index{
-    font-family:'EB Garamond', serif;
-    font-style: italic;
-    font-size: 26px;
-    color: var(--ink-soft);
-    letter-spacing:1px;
-    direction: ltr;
-  }
-  .footer .caption{
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: var(--ink-soft);
+    --watermark-size: 300px;
+    --watermark-top: 90px;
+    --watermark-right: 5px;
+    --watermark-letter-spacing: -6px;
+    --chapter-tag-top: 120px;
+    --chapter-tag-height: 100px;
+    --content-margin-top: 310px;
+    --icon-size: 130px;
+    --icon-rule-height: 130px;
+    --bottom-padding: 50px 90px 80px 90px;
   }
 </style>
 </head>
 <body>
 
-<div class="canvas">
+<nav class="site-nav">
+  <a href="../index.html" class="nav-home">☰ منو</a>
+  <div class="nav-side">
+    <a href="teach-1-overview.html">قبلی</a>
+    <a href="#" class="nav-disabled">بعدی ←</a>
+  </div>
+</nav>
 
-  <div class="watermark">22</div>
+<div class="canvas">
 
   <div class="chapter-tag">
     <div class="rule"></div>

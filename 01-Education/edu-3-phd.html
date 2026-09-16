@@ -3,162 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>تحصیلات — دکتری</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <style>
   :root{
-    --bg: #EAE3D9;
-    --ink: #202A33;
-    --ink-soft: #5B5449;
-    --line: #A6673D;
-    --outline: rgba(32,42,51,0.08);
-  }
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html,body{ background:#d8d2c6; }
-  .canvas{
-    width: 1080px;
-    min-height: 1920px;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .watermark{
-    position: absolute;
-    top: 90px;
-    right: 30px;
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 250px;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--outline);
-    letter-spacing: -6px;
-    user-select: none;
-  }
-
-  .chapter-tag{
-    position: absolute;
-    top: 150px;
-    left: 90px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-  .chapter-tag .rule{ width:1px; height:130px; background: var(--ink); opacity:0.55; }
-  .chapter-tag .label{
-    writing-mode: vertical-rl;
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: var(--ink-soft);
-    font-weight: 300;
-  }
-
-  .content-top{
-    margin-top: 430px;
-    padding: 0 90px;
-    text-align: right;
-  }
-  .content-top .eyebrow{
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--line);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  .content-top h1{
-    font-size: 56px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.4;
-    letter-spacing: -0.5px;
-  }
-
-  .detail{
-    margin-top: 60px;
-    padding: 0 90px;
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
-  }
-  .detail .rule{ width:1px; background: var(--ink); opacity:0.35; align-self: stretch; margin-top:6px; }
-  .detail .text{ max-width: 680px; }
-  .detail .text .institute{
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .detail .text .years{
-    display:flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 24px;
-    font-weight: 300;
-    color: var(--ink-soft);
-    margin-bottom: 34px;
-  }
-  .detail .text .years .badge{
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--bg);
-    background: var(--line);
-    padding: 5px 12px;
-    border-radius: 100px;
-    letter-spacing: 0.5px;
-  }
-  .detail .text .thesis-label{
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--line);
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-  }
-  .detail .text .thesis{
-    font-size: 27px;
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.85;
-    border-right: 3px solid var(--line);
-    padding-right: 22px;
-  }
-
-  .bottom{
-    margin-top: auto;
-    padding: 80px 90px 90px 90px;
-  }
-  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 60px; }
-  .icon-row .rule{ width:1px; height:200px; background: var(--ink); opacity:0.3; }
-  .icon-box{ width:200px; height:200px; }
-  .icon-box svg{ width:100%; height:100%; }
-
-  .footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer .index{
-    font-family:'EB Garamond', serif;
-    font-style: italic;
-    font-size: 26px;
-    color: var(--ink-soft);
-    letter-spacing:1px;
-    direction: ltr;
-  }
-  .footer .caption{
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: var(--ink-soft);
+    --watermark-size: 250px;
+    --watermark-top: 90px;
+    --watermark-right: 30px;
+    --watermark-letter-spacing: -6px;
+    --chapter-tag-top: 150px;
+    --chapter-tag-height: 130px;
+    --content-margin-top: 430px;
+    --icon-size: 200px;
+    --icon-rule-height: 200px;
+    --bottom-padding: 80px 90px 90px 90px;
   }
 </style>
 </head>
 <body>
+
+<nav class="site-nav">
+  <a href="../index.html" class="nav-home">☰ منو</a>
+  <div class="nav-side">
+    <a href="edu-2-master.html">قبلی</a>
+    <a href="../02-work-experience/work-1-overview.html">بعدی ←</a>
+  </div>
+</nav>
 
 <div class="canvas">
 
@@ -188,7 +57,6 @@
     <div class="icon-row">
       <div class="icon-box">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- connections -->
           <g stroke="#A6673D" stroke-width="1.3" opacity="0.55">
             <line x1="15" y1="20" x2="50" y2="10"/>
             <line x1="15" y1="20" x2="50" y2="37"/>
@@ -207,7 +75,6 @@
             <line x1="50" y1="63" x2="85" y2="65"/>
             <line x1="50" y1="90" x2="85" y2="65"/>
           </g>
-          <!-- nodes -->
           <g fill="#EAE3D9" stroke="#A6673D" stroke-width="2.5">
             <circle cx="15" cy="20" r="5"/>
             <circle cx="15" cy="50" r="5"/>
