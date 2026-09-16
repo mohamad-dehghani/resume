@@ -147,6 +147,15 @@ html,body{ background: var(--page-backdrop); }
   letter-spacing: -0.5px;
 }
 
+/* ---------- تصویر جلد کتاب / تصویر ضمیمه (07-Books) ---------- */
+.book-cover{ margin-top: 44px; padding: 0 90px; }
+.book-cover img{
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(32,42,51,0.22);
+}
+
 /* ---------- بلوک جزئیات (صفحات تحصیلات) ---------- */
 .detail{
   margin-top: 60px;
