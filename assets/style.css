@@ -209,6 +209,68 @@ html,body{ background: var(--page-backdrop); }
 
 .section-label{ margin-top: 55px; padding: 0 90px; font-size: var(--fs-label); font-weight: 700; color: var(--ink-soft); letter-spacing: 0.5px; }
 
+/* ---------- آمار مقاله (پروفایل تک‌مقاله‌ای — 05-Papers) ---------- */
+.paper-stats{
+  margin-top: 50px;
+  padding: 34px 90px;
+  display: flex;
+  border-top: 1px solid rgba(32,42,51,0.25);
+  border-bottom: 1px solid rgba(32,42,51,0.25);
+}
+.paper-stats .stat-item{ flex:1; text-align:center; padding: 0 10px; }
+.paper-stats .stat-item:not(:last-child){ border-left: 1px solid rgba(32,42,51,0.25); }
+.paper-stats .stat-item .num{
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--line);
+  display: block;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.paper-stats .stat-item .lbl{ font-size: 16px; font-weight: 500; color: var(--ink); letter-spacing: 0.5px; }
+
+/* ---------- آمار دو‌سطحی پژوهشی (pub-0-overview) ---------- */
+.stats-primary{
+  margin-top: 70px;
+  padding: 40px 90px;
+  display: flex;
+  border-top: 1px solid rgba(32,42,51,0.25);
+  border-bottom: 1px solid rgba(32,42,51,0.25);
+}
+.stats-primary .stat-item{ flex:1; text-align:center; padding: 0 10px; }
+.stats-primary .stat-item:not(:last-child){ border-left: 1px solid rgba(32,42,51,0.25); }
+.stats-primary .stat-item .num{
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 78px;
+  color: var(--line);
+  display: block;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.stats-primary .stat-item .lbl{ font-size: 17px; font-weight: 500; color: var(--ink); letter-spacing: 0.5px; }
+
+.stats-secondary{ margin-top: 46px; padding: 0 90px; display: flex; }
+.stats-secondary .stat-item{ flex:1; text-align:center; padding: 0 10px; }
+.stats-secondary .stat-item:not(:last-child){ border-left: 1px solid rgba(32,42,51,0.2); }
+.stats-secondary .stat-item .num{
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 46px;
+  color: var(--ink);
+  display: block;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.stats-secondary .stat-item .lbl{ font-size: 15px; font-weight: 400; color: var(--ink-soft); line-height: 1.4; }
+
+/* ---------- فهرست سایر مقالات (pub-4-full-list) ---------- */
+.list{ margin-top: 50px; padding: 0 90px; }
+.list-item{ display: flex; align-items: flex-start; gap: 22px; padding: 16px 0; border-bottom: 1px solid rgba(32,42,51,0.16); }
+.list-item .yr{ font-family: var(--font-accent); font-style: italic; font-size: 20px; color: var(--line); min-width: 56px; direction: ltr; text-align: left; padding-top: 3px; flex-shrink: 0; }
+.list-item .ttl{ font-size: 21px; font-weight: 400; color: var(--ink); line-height: 1.55; text-align: right; }
+
 /* ---------- لیست سمت‌های فعلی (work-1-overview) ---------- */
 .current-list{ margin-top: 24px; padding: 0 90px; }
 .job-row{ display: flex; align-items: center; gap: 24px; padding: 26px 0; border-bottom: 1px solid rgba(32,42,51,0.18); }
