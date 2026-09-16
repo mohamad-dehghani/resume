@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>کتاب — پردازش زبان طبیعی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAE3D9;
+    --ink: #202A33;
+    --ink-soft: #5B5449;
+    --line: #A6673D;
+    --outline: rgba(32,42,51,0.08);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#d8d2c6; }
+  .canvas{
+    width: 1080px;
+    min-height: 1920px;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watermark{
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 190px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--outline);
+    letter-spacing: -2px;
+    user-select: none;
+  }
+
+  .chapter-tag{
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  .chapter-tag .rule{ width:1px; height:130px; background: var(--ink); opacity:0.55; }
+  .chapter-tag .label{
+    writing-mode: vertical-rl;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .content-top{
+    margin-top: 430px;
+    padding: 0 90px;
+    text-align: right;
+  }
+  .content-top .eyebrow{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--line);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .content-top h1{
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+  }
+
+  .detail{
+    margin-top: 60px;
+    padding: 0 90px;
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .detail .rule{ width:1px; background: var(--ink); opacity:0.35; align-self: stretch; margin-top:6px; }
+  .detail .text{ max-width: 680px; }
+  .detail .text .institute{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .detail .text .years{
+    display:flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--ink-soft);
+  }
+  .detail .text .years .badge{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--line);
+    padding: 5px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  .bottom{
+    margin-top: auto;
+    padding: 80px 90px 90px 90px;
+  }
+  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 60px; }
+  .icon-row .rule{ width:1px; height:200px; background: var(--ink); opacity:0.3; }
+  .icon-box{ width:200px; height:200px; }
+  .icon-box svg{ width:100%; height:100%; }
+
+  .footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .index{
+    font-family:'EB Garamond', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink-soft);
+    letter-spacing:1px;
+    direction: ltr;
+  }
+  .footer .caption{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+
+  <div class="watermark"></div>
+
+  <div class="chapter-tag">
+    <div class="rule"></div>
+    <div class="label">فصل سوم — کتاب‌ها</div>
+  </div>
+
+  <div class="content-top">
+    <div class="eyebrow">تألیف کتاب</div>
+    <h1>پردازش زبان طبیعی</h1>
+  </div>
+
+  <div class="detail">
+    <div class="rule"></div>
+    <div class="text">
+      <span class="institute">انتشارات سنجش و دانش</span>
+      <span class="years">۱۴۰۰ <span class="badge">فارسی</span> <span class="badge">نویسنده اول</span></span>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="icon-row">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 24 C37 17 18 19 10 26 L10 76 C18 69 37 67 50 74 C63 67 82 69 90 76 L90 26 C82 19 63 17 50 24 Z" stroke="#A6673D" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="50" y1="24" x2="50" y2="74" stroke="#A6673D" stroke-width="2"/>
+          <path d="M56 34 h24 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 h-16 l-8 7 v-7 h0 a4 4 0 0 1 -4 -4 v-8 a4 4 0 0 1 4 -4 Z" stroke="#A6673D" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="60" y1="41" x2="76" y2="41" stroke="#A6673D" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="60" y1="46" x2="70" y2="46" stroke="#A6673D" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="rule"></div>
+    </div>
+    <div class="footer">
+      <div class="index">3.3</div>
+      <div class="caption">Book&nbsp;·&nbsp;Natural Language Processing</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
