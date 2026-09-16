@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تدریس — دوره‌ها و کارگاه‌ها</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAE3D9;
+    --ink: #202A33;
+    --ink-soft: #5B5449;
+    --line: #A6673D;
+    --outline: rgba(32,42,51,0.08);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#d8d2c6; }
+  .canvas{
+    width: 1080px;
+    min-height: 1920px;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watermark{
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 300px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--outline);
+    letter-spacing: -6px;
+    user-select: none;
+  }
+
+  .chapter-tag{
+    position: absolute;
+    top: 120px;
+    left: 90px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  .chapter-tag .rule{ width:1px; height:100px; background: var(--ink); opacity:0.55; }
+  .chapter-tag .label{
+    writing-mode: vertical-rl;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .content-top{
+    margin-top: 310px;
+    padding: 0 90px;
+    text-align: right;
+  }
+  .content-top .eyebrow{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--line);
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+  }
+  .content-top h1{
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+  }
+
+  .orgs{
+    margin-top: 44px;
+    padding: 0 90px;
+  }
+
+  .org-block{
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(32,42,51,0.18);
+  }
+  .org-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .org-name{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .org-meta{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .org-count{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--line);
+    padding: 4px 11px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .org-loc{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .course-single{
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--ink-soft);
+  }
+  .course-single .yr{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: var(--line);
+    margin-left: 6px;
+    direction: ltr;
+    display: inline-block;
+  }
+
+  .course-list{
+    padding-right: 4px;
+  }
+  .course-list .c{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--ink-soft);
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .course-list .c .yr{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: var(--line);
+    font-size: 15px;
+    direction: ltr;
+    flex-shrink: 0;
+  }
+
+  .bottom{
+    margin-top: auto;
+    padding: 50px 90px 80px 90px;
+  }
+  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 36px; }
+  .icon-row .rule{ width:1px; height:130px; background: var(--ink); opacity:0.3; }
+  .icon-box{ width:130px; height:130px; }
+  .icon-box svg{ width:100%; height:100%; }
+
+  .footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .index{
+    font-family:'EB Garamond', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink-soft);
+    letter-spacing:1px;
+    direction: ltr;
+  }
+  .footer .caption{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+
+  <div class="watermark">22</div>
+
+  <div class="chapter-tag">
+    <div class="rule"></div>
+    <div class="label">فصل ششم — تدریس و آموزش</div>
+  </div>
+
+  <div class="content-top">
+    <div class="eyebrow">دوره‌ها و کارگاه‌های برگزارشده</div>
+    <h1>۲۲ دوره در ۱۴ مجموعه</h1>
+  </div>
+
+  <div class="orgs">
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">مدرسه تیزهوشان فرزانگان</span>
+        <span class="org-meta"><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-single">آینده هوش مصنوعی <span class="yr">1405</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">آی‌تک</span>
+        <span class="org-meta"><span class="org-count">۳ دوره</span><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-list">
+        <div class="c"><span>پردازش زبان پیشرفته</span><span class="yr">1405</span></div>
+        <div class="c"><span>یادگیری ماشین شهودی</span><span class="yr">1405</span></div>
+        <div class="c"><span>هوش مصنوعی در پزشکی</span><span class="yr">1404</span></div>
+      </div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">AI Bridge</span>
+        <span class="org-meta"><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-single">آینده برنامه‌نویسی <span class="yr">1405</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">تهران‌دیتا</span>
+        <span class="org-meta"><span class="org-loc">تهران</span></span>
+      </div>
+      <div class="course-single">پردازش زبان طبیعی پیشرفته <span class="yr">1404</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">شهرک علمی و تحقیقاتی اصفهان</span>
+        <span class="org-meta"><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-single">کاربردهای هوش مصنوعی در صنعت <span class="yr">1404</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">دانشگاه اصفهان</span>
+        <span class="org-meta"><span class="org-count">۲ دوره</span><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-list">
+        <div class="c"><span>کسب درآمد دلاری از Upwork</span><span class="yr">1403</span></div>
+        <div class="c"><span>دوره آموزش داده‌کاوی</span><span class="yr">1399</span></div>
+      </div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">همخوان اصفهان</span>
+        <span class="org-meta"><span class="org-loc">اصفهان</span></span>
+      </div>
+      <div class="course-single">یادگیری ماشین برای مبتدیان <span class="yr">1403</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">دانشگاه علوم پزشکی تهران</span>
+        <span class="org-meta"><span class="org-loc">تهران</span></span>
+      </div>
+      <div class="course-single">هوش مصنوعی در علوم پزشکی <span class="yr">1400</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">AAIS</span>
+        <span class="org-meta"><span class="org-loc">آنلاین</span></span>
+      </div>
+      <div class="course-single">آشنایی با NLI <span class="yr">1400</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">دانشگاه شهرکرد</span>
+        <span class="org-meta"><span class="org-loc">آنلاین</span></span>
+      </div>
+      <div class="course-single">حل مسئله برای علوم داده <span class="yr">1400</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">کنفرانس وب‌پژوهی</span>
+        <span class="org-meta"><span class="org-loc">آنلاین</span></span>
+      </div>
+      <div class="course-single">تشخیص NER با Transformer <span class="yr">1400</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">نیک‌آموز</span>
+        <span class="org-meta"><span class="org-count">۵ دوره</span><span class="org-loc">تهران</span></span>
+      </div>
+      <div class="course-list">
+        <div class="c"><span>آموزش پیشرفته پردازش متون فارسی</span><span class="yr">1399</span></div>
+        <div class="c"><span>پردازش زبان طبیعی مقدماتی با پایتون</span><span class="yr">1399</span></div>
+        <div class="c"><span>کاهش نویز تصاویر با TensorFlow و Autoencoder</span><span class="yr">1399</span></div>
+        <div class="c"><span>ساخت داشبورد تعاملی با Streamlit</span><span class="yr">1399</span></div>
+        <div class="c"><span>داده‌کاوی در SQL Server</span><span class="yr">1399</span></div>
+      </div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">WSS2020</span>
+        <span class="org-meta"><span class="org-loc">آنلاین</span></span>
+      </div>
+      <div class="course-single">کارگاه آموزش BERT <span class="yr">1399</span></div>
+    </div>
+
+    <div class="org-block">
+      <div class="org-head">
+        <span class="org-name">پژوهشگاه دانش‌های بنیادی (IPM)</span>
+        <span class="org-meta"><span class="org-count">۲ دوره</span><span class="org-loc">تهران</span></span>
+      </div>
+      <div class="course-list">
+        <div class="c"><span>آموزش Transformers</span><span class="yr">1399</span></div>
+        <div class="c"><span>آشنایی با پردازش متون فارسی و چالش‌ها</span><span class="yr">1398</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <div class="icon-row">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 20 L88 36 L50 52 L12 36 Z" stroke="#A6673D" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M28 44 V64 C28 70 38 76 50 76 C62 76 72 70 72 64 V44" stroke="#A6673D" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="88" y1="36" x2="88" y2="58" stroke="#A6673D" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="rule"></div>
+    </div>
+    <div class="footer">
+      <div class="index">6.2</div>
+      <div class="caption">Courses&nbsp;&amp;&nbsp;Workshops</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

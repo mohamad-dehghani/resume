@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تدریس — خلاصه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAE3D9;
+    --ink: #202A33;
+    --ink-soft: #5B5449;
+    --line: #A6673D;
+    --outline: rgba(32,42,51,0.08);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:#d8d2c6; }
+  .canvas{
+    width: 1080px;
+    min-height: 1920px;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watermark{
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 420px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--outline);
+    letter-spacing: -10px;
+    user-select: none;
+  }
+
+  .chapter-tag{
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  .chapter-tag .rule{ width:1px; height:130px; background: var(--ink); opacity:0.55; }
+  .chapter-tag .label{
+    writing-mode: vertical-rl;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .content-top{
+    margin-top: 430px;
+    padding: 0 90px;
+    text-align: right;
+  }
+  .content-top .eyebrow{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--line);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .content-top h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+  }
+
+  .stats{
+    margin-top: 55px;
+    padding: 30px 90px;
+    display: flex;
+    border-top: 1px solid rgba(32,42,51,0.25);
+    border-bottom: 1px solid rgba(32,42,51,0.25);
+  }
+  .stats .stat-item{ flex:1; text-align:center; padding: 0 8px; }
+  .stats .stat-item:not(:last-child){ border-left: 1px solid rgba(32,42,51,0.25); }
+  .stats .stat-item .num{
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 54px;
+    color: var(--line);
+    display: block;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .stats .stat-item .lbl{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .section-label{
+    margin-top: 55px;
+    padding: 0 90px;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    letter-spacing: 0.5px;
+  }
+
+  .tags{
+    margin-top: 20px;
+    padding: 0 90px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .tag{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid rgba(32,42,51,0.35);
+    padding: 8px 18px;
+    border-radius: 100px;
+  }
+
+  .topics{
+    margin-top: 26px;
+    padding: 0 90px;
+  }
+  .topic-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(32,42,51,0.16);
+  }
+  .topic-row .n{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--line);
+    min-width: 34px;
+  }
+  .topic-row .t{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .bottom{
+    margin-top: auto;
+    padding: 60px 90px 90px 90px;
+  }
+  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 45px; }
+  .icon-row .rule{ width:1px; height:160px; background: var(--ink); opacity:0.3; }
+  .icon-box{ width:160px; height:160px; }
+  .icon-box svg{ width:100%; height:100%; }
+
+  .footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .index{
+    font-family:'EB Garamond', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink-soft);
+    letter-spacing:1px;
+    direction: ltr;
+  }
+  .footer .caption{
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+
+  <div class="watermark">15</div>
+
+  <div class="chapter-tag">
+    <div class="rule"></div>
+    <div class="label">فصل ششم — تدریس و آموزش</div>
+  </div>
+
+  <div class="content-top">
+    <div class="eyebrow">تدریس و انتقال دانش · از ۱۳۹۰</div>
+    <h1>۱۵ سال تدریس؛<br>۷ سال آن حرفه‌ای</h1>
+  </div>
+
+  <div class="stats">
+    <div class="stat-item">
+      <span class="num">15</span>
+      <span class="lbl">سال سابقه آموزش</span>
+    </div>
+    <div class="stat-item">
+      <span class="num">7</span>
+      <span class="lbl">سال تدریس حرفه‌ای</span>
+    </div>
+    <div class="stat-item">
+      <span class="num">22</span>
+      <span class="lbl">دوره و کارگاه</span>
+    </div>
+  </div>
+
+  <div class="section-label">قالب و بستر تدریس</div>
+  <div class="tags">
+    <span class="tag">دانشگاه</span>
+    <span class="tag">صنعت</span>
+    <span class="tag">کنفرانس حضوری</span>
+    <span class="tag">کنفرانس آنلاین</span>
+    <span class="tag">تئوری</span>
+    <span class="tag">کاربردی</span>
+  </div>
+
+  <div class="section-label">محورهای اصلی تدریس</div>
+  <div class="topics">
+    <div class="topic-row">
+      <span class="n">01</span>
+      <span class="t">پردازش زبان طبیعی پیشرفته</span>
+    </div>
+    <div class="topic-row">
+      <span class="n">02</span>
+      <span class="t">هوش مصنوعی در سلامت</span>
+    </div>
+    <div class="topic-row">
+      <span class="n">03</span>
+      <span class="t">یادگیری ماشین، شبکه عصبی، ترنسفورمرها و مدل‌های زبانی</span>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="icon-row">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="18" width="68" height="46" rx="3" stroke="#A6673D" stroke-width="2.5"/>
+          <line x1="50" y1="64" x2="50" y2="76" stroke="#A6673D" stroke-width="2.5"/>
+          <line x1="34" y1="84" x2="66" y2="84" stroke="#A6673D" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="26" y1="30" x2="58" y2="30" stroke="#A6673D" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="40" x2="70" y2="40" stroke="#A6673D" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="26" y1="50" x2="46" y2="50" stroke="#A6673D" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="rule"></div>
+    </div>
+    <div class="footer">
+      <div class="index">6.1</div>
+      <div class="caption">Teacging&nbsp;·&nbsp;Overview</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
