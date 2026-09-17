@@ -523,3 +523,75 @@ body.home{
   .chapter-card{ padding: 22px 20px; gap: 18px; }
   .chapter-num{ font-size: 38px; min-width: 48px; }
 }
+
+/* ---------- فهرست پروژه‌ها (proj-1-overview) ---------- */
+.proj{
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(32,42,51,0.18);
+}
+.proj .n{
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 30px;
+  color: var(--line);
+  min-width: 44px;
+  flex-shrink: 0;
+}
+.proj .body{ flex:1; text-align: right; }
+.proj .t{ font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.proj .d{ font-size: 17px; font-weight: 300; color: var(--ink-soft); line-height: 1.7; }
+.proj.featured .t{ color: var(--line); }
+.proj .star{
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--line);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-right: 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* ---------- توضیحات پروژه (proj-2/3/4) ---------- */
+.desc{ margin-top: 40px; padding: 0 90px; max-width: 780px; }
+.desc p{
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.85;
+  text-align: right;
+  margin-bottom: 26px;
+}
+.desc p:last-child{ margin-bottom: 0; }
+.desc ul{
+  list-style: none;
+  margin: 4px 0 30px 0;
+  padding-right: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.desc ul li{
+  position: relative;
+  font-size: 23px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.75;
+  text-align: right;
+  padding-right: 24px;
+}
+.desc ul li::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line);
+}
+

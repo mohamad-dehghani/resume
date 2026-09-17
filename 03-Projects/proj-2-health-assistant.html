@@ -3,138 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>پروژه — دستیار سلامت</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <style>
   :root{
-    --bg: #EAE3D9;
-    --ink: #202A33;
-    --ink-soft: #5B5449;
-    --line: #A6673D;
-    --outline: rgba(32,42,51,0.08);
-  }
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html,body{ background:#d8d2c6; }
-  .canvas{
-    width: 1080px;
-    min-height: 1920px;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .watermark{
-    position: absolute;
-    top: 90px;
-    right: 30px;
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 260px;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--outline);
-    letter-spacing: -4px;
-    user-select: none;
-  }
-
-  .chapter-tag{
-    position: absolute;
-    top: 150px;
-    left: 90px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-  .chapter-tag .rule{ width:1px; height:130px; background: var(--ink); opacity:0.55; }
-  .chapter-tag .label{
-    writing-mode: vertical-rl;
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: var(--ink-soft);
-    font-weight: 300;
-  }
-
-  .content-top{
-    margin-top: 430px;
-    padding: 0 90px;
-    text-align: right;
-  }
-  .content-top .eyebrow{
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--line);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  .content-top h1{
-    font-size: 52px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.4;
-    letter-spacing: -0.5px;
-  }
-
-  .desc{
-    margin-top: 40px;
-    padding: 0 90px;
-    max-width: 780px;
-  }
-  .desc p{
-    font-size: 26px;
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.85;
-    text-align: right;
-  }
-
-  .tags{
-    margin-top: 40px;
-    padding: 0 90px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .tag{
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-    border: 1px solid rgba(32,42,51,0.35);
-    padding: 7px 16px;
-    border-radius: 100px;
-  }
-
-  .bottom{
-    margin-top: auto;
-    padding: 60px 90px 90px 90px;
-  }
-  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 50px; }
-  .icon-row .rule{ width:1px; height:180px; background: var(--ink); opacity:0.3; }
-  .icon-box{ width:180px; height:180px; }
-  .icon-box svg{ width:100%; height:100%; }
-
-  .footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer .index{
-    font-family:'EB Garamond', serif;
-    font-style: italic;
-    font-size: 26px;
-    color: var(--ink-soft);
-    letter-spacing:1px;
-    direction: ltr;
-  }
-  .footer .caption{
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    color: var(--ink-soft);
+    --fs-eyebrow: 22px;
+    --fs-h1: 52px;
+    --fs-index: 26px;
+    --fs-caption: 16px;
+    --fs-tag: 15px;
+    --tag-padding: 7px 16px;
+    --tags-margin-top: 40px;
+    --watermark-size: 260px;
+    --watermark-top: 90px;
+    --watermark-right: 30px;
+    --watermark-letter-spacing: -4px;
+    --chapter-tag-top: 150px;
+    --chapter-tag-height: 130px;
+    --content-margin-top: 430px;
+    --icon-size: 180px;
+    --icon-rule-height: 180px;
+    --bottom-padding: 60px 90px 90px 90px;
   }
 </style>
 </head>
@@ -163,18 +51,18 @@
   </div>
 
   <div class="desc">
-      <p>
-    این پروژه ادامه‌ی مستقیم کارم روی بیومارکرها و پرسش‌وپاسخ پزشکی بود، با یه هدف مشخص برای استفاده‌ی واقعی کاربران: خیلیا وقتی یه علامت یا نتیجه‌ی آزمایش غیرعادی می‌بینن، اول سراغ جست‌وجوی عمومی می‌رن و با یه دنیا اطلاعات ضدونقیض و نگران‌کننده مواجه می‌شن. هدف، ساخت یه محصول واقعی بود که جواب دقیق، مسئولانه و قابل‌فهم بده؛ نه صرفاً یه دمو.
-  </p>
-  <ul>
-    <li>طراحی معماری RAG (Retrieval-Augmented Generation) برای اینکه پاسخ‌ها روی منابع پزشکی معتبر مستند باشن، نه صرفاً تولید آزاد مدل</li>
-    <li>ساخت زیرساختی برای ذخیره و ردیابی سابقه‌ی بیومارکرهای کاربر در طول زمان، برای تحلیل روند به‌جای یه عدد لحظه‌ای</li>
-    <li>طراحی guardrail و پرامپت‌های محدودکننده برای جلوگیری از تشخیص قطعی و هدایت کاربر به مراجعه‌ی پزشکی در موارد حساس</li>
-    <li>تست و ارزیابی سیستم روی سناریوهای واقعی پزشکی برای اطمینان از دقت و ایمنی پاسخ‌ها قبل از قرار گرفتن در دسترس کاربر نهایی</li>
-  </ul>
-  <p>
-    سخت‌ترین بخش کار، فنی‌بودنش نبود؛ لحن بود. باید جوری طراحی می‌شد که دستیار نه مثل یه پزشک سردوجدی رفتار کنه، نه مثل رباتی که هر سوالی رو با «برو دکتر» جواب می‌ده. نسخه‌ی نهایی، محصولی شد که هم از نظر پزشکی مسئولانه بود و هم واقعاً برای کاربر عادی قابل‌استفاده؛ مسیری که از یه ایده‌ی تحقیقاتی شروع شد و به یه ابزار واقعی رسید.
-  </p>
+    <p>
+      این پروژه ادامه‌ی مستقیم کارم روی بیومارکرها و پرسش‌وپاسخ پزشکی بود، با یه هدف مشخص برای استفاده‌ی واقعی کاربران: خیلیا وقتی یه علامت یا نتیجه‌ی آزمایش غیرعادی می‌بینن، اول سراغ جست‌وجوی عمومی می‌رن و با یه دنیا اطلاعات ضدونقیض و نگران‌کننده مواجه می‌شن. هدف، ساخت یه محصول واقعی بود که جواب دقیق، مسئولانه و قابل‌فهم بده؛ نه صرفاً یه دمو.
+    </p>
+    <ul>
+      <li>طراحی معماری RAG (Retrieval-Augmented Generation) برای اینکه پاسخ‌ها روی منابع پزشکی معتبر مستند باشن، نه صرفاً تولید آزاد مدل</li>
+      <li>ساخت زیرساختی برای ذخیره و ردیابی سابقه‌ی بیومارکرهای کاربر در طول زمان، برای تحلیل روند به‌جای یه عدد لحظه‌ای</li>
+      <li>طراحی guardrail و پرامپت‌های محدودکننده برای جلوگیری از تشخیص قطعی و هدایت کاربر به مراجعه‌ی پزشکی در موارد حساس</li>
+      <li>تست و ارزیابی سیستم روی سناریوهای واقعی پزشکی برای اطمینان از دقت و ایمنی پاسخ‌ها قبل از قرار گرفتن در دسترس کاربر نهایی</li>
+    </ul>
+    <p>
+      سخت‌ترین بخش کار، فنی‌بودنش نبود؛ لحن بود. باید جوری طراحی می‌شد که دستیار نه مثل یه پزشک سردوجدی رفتار کنه، نه مثل رباتی که هر سوالی رو با «برو دکتر» جواب می‌ده. نسخه‌ی نهایی، محصولی شد که هم از نظر پزشکی مسئولانه بود و هم واقعاً برای کاربر عادی قابل‌استفاده؛ مسیری که از یه ایده‌ی تحقیقاتی شروع شد و به یه ابزار واقعی رسید.
+    </p>
   </div>
 
   <div class="tags">

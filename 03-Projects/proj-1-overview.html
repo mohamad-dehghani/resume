@@ -3,144 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>پروژه‌ها — فهرست</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;700;900&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
 <style>
   :root{
-    --bg: #EAE3D9;
-    --ink: #202A33;
-    --ink-soft: #5B5449;
-    --line: #A6673D;
-    --outline: rgba(32,42,51,0.08);
-  }
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html,body{ background:#d8d2c6; }
-  .canvas{
-    width: 1080px;
-    min-height: 1920px;
-    background: var(--bg);
-    position: relative;
-    overflow: hidden;
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .watermark{
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 400px;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--outline);
-    letter-spacing: -8px;
-    user-select: none;
-  }
-
-  .chapter-tag{
-    position: absolute;
-    top: 130px;
-    left: 90px;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-  .chapter-tag .rule{ width:1px; height:110px; background: var(--ink); opacity:0.55; }
-  .chapter-tag .label{
-    writing-mode: vertical-rl;
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: var(--ink-soft);
-    font-weight: 300;
-  }
-
-  .content-top{
-    margin-top: 330px;
-    padding: 0 90px;
-    text-align: right;
-  }
-  .content-top .eyebrow{
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--line);
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-  }
-  .content-top h1{
-    font-size: 48px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-  }
-
-  .list{
-    margin-top: 46px;
-    padding: 0 90px;
-  }
-  .proj{
-    display: flex;
-    align-items: flex-start;
-    gap: 22px;
-    padding: 24px 0;
-    border-bottom: 1px solid rgba(32,42,51,0.18);
-  }
-  .proj .n{
-    font-family: 'EB Garamond', serif;
-    font-style: italic;
-    font-size: 30px;
-    color: var(--line);
-    min-width: 44px;
-    flex-shrink: 0;
-  }
-  .proj .body{ flex:1; text-align: right; }
-  .proj .t{ font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-  .proj .d{ font-size: 17px; font-weight: 300; color: var(--ink-soft); line-height: 1.7; }
-  .proj.featured .t{ color: var(--line); }
-  .proj .star{
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--bg);
-    background: var(--line);
-    padding: 3px 10px;
-    border-radius: 100px;
-    margin-right: 10px;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-
-  .bottom{
-    margin-top: auto;
-    padding: 60px 90px 90px 90px;
-  }
-  .icon-row{ display:flex; align-items:center; gap: 30px; margin-bottom: 50px; }
-  .icon-row .rule{ width:1px; height:170px; background: var(--ink); opacity:0.3; }
-  .icon-box{ width:170px; height:170px; }
-  .icon-box svg{ width:100%; height:100%; }
-
-  .footer{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer .index{
-    font-family:'EB Garamond', serif;
-    font-style: italic;
-    font-size: 26px;
-    color: var(--ink-soft);
-    letter-spacing:1px;
-    direction: ltr;
-  }
-  .footer .caption{
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: var(--ink-soft);
+    --fs-eyebrow: 22px;
+    --fs-h1: 48px;
+    --fs-index: 26px;
+    --fs-caption: 17px;
+    --watermark-size: 400px;
+    --watermark-top: 80px;
+    --watermark-right: 10px;
+    --watermark-letter-spacing: -8px;
+    --icon-size: 170px;
+    --icon-rule-height: 170px;
+    --bottom-padding: 60px 90px 90px 90px;
+    --list-margin-top: 46px;
   }
 </style>
 </head>
@@ -173,24 +50,24 @@
     <div class="proj featured">
       <span class="n">01</span>
       <div class="body">
-        <div class="t"><span class="star"> برگزیده</span>دستیار شخصی سلامت با مدل‌های زبانی</div>
-        <div class="d">دستیاری که به سوالات پزشکی کاربر پاسخ می‌ده و روند تغییرات سلامتش رو دنبال می‌کنه</div>
+        <div class="t"><span class="star">برگزیده</span>&nbsp;دستیار شخصی سلامت با مدل‌های زبانی</div>
+        <div class="d"> دستیاری که به سوالات پزشکی کاربر پاسخ می‌ده و روند تغییرات سلامتش رو دنبال می‌کنه </div>
       </div>
     </div>
 
     <div class="proj featured">
       <span class="n">02</span>
       <div class="body">
-        <div class="t"><span class="star">برگزیده</span>پیش‌بینی بازار با سری‌های زمانی</div>
-        <div class="d">مدلی برای پیش‌بینی روند قیمت‌ها با ترکیب الگوریتم‌های سری زمانی و یادگیری عمیق</div>
+        <div class="t"><span class="star">برگزیده</span>&nbsp;پیش‌بینی بازار با سری‌های زمانی</div>
+        <div class="d"> مدلی برای پیش‌بینی روند قیمت‌ها با ترکیب الگوریتم‌های سری زمانی و یادگیری عمیق </div>
       </div>
     </div>
 
     <div class="proj featured">
       <span class="n">03</span>
       <div class="body">
-        <div class="t"><span class="star">برگزیده</span>تشخیص خودکار الفاظ رکیک فارسی</div>
-        <div class="d">سیستمی برای شناسایی و فیلتر محتوای توهین‌آمیز در متون فارسی با یادگیری عمیق</div>
+        <div class="t"><span class="star">برگزیده</span>&nbsp;تشخیص خودکار الفاظ رکیک فارسی</div>
+        <div class="d"> سیستمی برای شناسایی و فیلتر محتوای توهین‌آمیز در متون فارسی با یادگیری عمیق </div>
       </div>
     </div>
 
