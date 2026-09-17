@@ -338,3 +338,53 @@ html,body{ background: var(--page-backdrop); }
 .footer{ display:flex; justify-content: space-between; align-items: center; }
 .footer .index{ font-family: var(--font-accent); font-style: italic; font-size: var(--fs-index); color: var(--ink-soft); letter-spacing:1px; direction: ltr; }
 .footer .caption{ font-size: var(--fs-caption); font-weight: 700; letter-spacing: 2px; color: var(--ink-soft); }
+
+/* ---------- توصیه‌نامه‌ها (06-Recommendation-Professional) ---------- */
+.story{ margin-top: 34px; padding: 0 90px; }
+.story-text{
+  font-size: 27px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.85;
+  text-align: right;
+  border-right: 3px solid var(--line);
+  padding-right: 22px;
+}
+.doc{ margin-top: 46px; padding: 0 90px; display: flex; justify-content: center; }
+.doc img{
+  width: 100%;
+  max-width: 760px;
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(32,42,51,0.22);
+  box-shadow: 0 10px 34px rgba(32,42,51,0.13);
+}
+.doc-caption{
+  margin-top: 16px;
+  padding: 0 90px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+.grid{ margin-top: 46px; padding: 0 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.grid img{
+  width: 100%;
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(32,42,51,0.22);
+  box-shadow: 0 8px 26px rgba(32,42,51,0.12);
+}
+.letter-footer{
+  margin-top: auto;
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 46px 0 70px 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(32,42,51,0.18);
+}
+.letter-footer .index{ font-family: var(--font-accent); font-style: italic; font-size: 26px; color: var(--ink-soft); letter-spacing:1px; direction: ltr; }
+.letter-footer .caption{ font-size: 16px; font-weight: 300; letter-spacing: 2px; color: var(--ink-soft); }
