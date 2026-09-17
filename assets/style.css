@@ -34,6 +34,9 @@
   --fs-skill-num:     50px; 
   --fs-index:         35px;  
   --fs-caption:       30px;  
+  --fs-quote-mark:    130px;
+  --fs-story:         32px;
+  --story-margin-top: 34px;
 
   /* ---------- ابعاد پیش‌فرض (هر صفحه در صورت نیاز override می‌کند) ---------- */
   --watermark-size: 280px;
@@ -340,7 +343,7 @@ html,body{ background: var(--page-backdrop); }
 .footer .caption{ font-size: var(--fs-caption); font-weight: 700; letter-spacing: 2px; color: var(--ink-soft); }
 
 /* ---------- توصیه‌نامه‌ها (06-Recommendation-Professional) ---------- */
-.story{ margin-top: 34px; padding: 0 90px; }
+.story{ margin-top: var(--story-margin-top); padding: 0 90px; }
 .story-text{
   font-size: 27px;
   font-weight: 300;
@@ -388,3 +391,48 @@ html,body{ background: var(--page-backdrop); }
 }
 .letter-footer .index{ font-family: var(--font-accent); font-style: italic; font-size: 26px; color: var(--ink-soft); letter-spacing:1px; direction: ltr; }
 .letter-footer .caption{ font-size: 16px; font-weight: 300; letter-spacing: 2px; color: var(--ink-soft); }
+
+/* ---------- همکاری و اساتید (mentor pages) ---------- */
+.quote-mark{
+  font-family: var(--font-accent);
+  font-size: var(--fs-quote-mark);
+  color: var(--line);
+  opacity: 0.3;
+  line-height: 0.6;
+  margin-bottom: 10px;
+}
+.story-text{
+  font-size: var(--fs-story);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.9;
+  text-align: right;
+  max-width: 820px;
+}
+.cta{
+  margin-top: 34px;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--line);
+  text-align: right;
+}
+.person-tag{
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(32,42,51,0.25);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.person-tag .rule{ width:1px; height:60px; background: var(--ink); opacity:0.35; }
+.person-tag .name{ font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.person-tag .role{ font-size: 17px; font-weight: 300; color: var(--ink-soft); }
+.closing{
+  margin-top: 34px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--ink-soft);
+  text-align: right;
+  font-style: italic;
+  font-family: var(--font-accent);
+}
