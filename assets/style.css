@@ -14,8 +14,6 @@
   --font-main: 'Vazirmatn', 'Times New Roman';
   --font-accent: 'EB Garamond', 'Times New Roman';
 
-  /* ---------- مقیاس سایز نوشته‌ها (بزرگ‌تر و خواناتر از نسخه‌ی قبلی) ----------
-     این تنها جایی است که باید برای تغییر «سایز فونت» در کل سایت ویرایش شود. */
   --fs-eyebrow:       40px;   
   --fs-h1:            65px;
   --fs-stat-num:      75px;  
@@ -435,4 +433,93 @@ html,body{ background: var(--page-backdrop); }
   text-align: right;
   font-style: italic;
   font-family: var(--font-accent);
+}
+
+/* =========================================================================
+   صفحه‌ی اصلی (index.html) — فهرست فصل‌ها
+   ========================================================================= */
+body.home{
+  font-family: var(--font-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-hero{
+  width: 100%;
+  max-width: 900px;
+  padding: 90px 32px 50px 32px;
+  text-align: center;
+}
+.home-hero .eyebrow{
+  font-size: var(--fs-eyebrow);
+  color: var(--line);
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+.home-hero h1{
+  font-size: 46px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+.home-hero p{
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.chapters{
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 32px 90px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.chapter-card{
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  background: var(--bg);
+  border: 1px solid rgba(32,42,51,0.15);
+  border-radius: 20px;
+  padding: 30px 32px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.chapter-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(32,42,51,0.12);
+}
+.chapter-num{
+  font-family: var(--font-main);
+  font-style: italic;
+  font-size: 50px;
+  color: var(--line);
+  min-width: 64px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.chapter-info{ flex: 1; text-align: right; }
+.chapter-title{ font-size: var(--fs-heading); color: var(--ink); margin-bottom: 6px; }
+.chapter-desc{ font-size: var(--fs-body-sm); font-weight: 300; color: var(--ink-soft); }
+.chapter-arrow{ font-size: 28px; color: var(--ink-soft); flex-shrink: 0; }
+
+.home-footer{
+  padding: 0 32px 60px 32px;
+  font-size: var(--fs-tiny);
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+@media (max-width: 560px){
+  .home-hero h1{ font-size: 34px; }
+  .chapter-card{ padding: 22px 20px; gap: 18px; }
+  .chapter-num{ font-size: 38px; min-width: 48px; }
 }

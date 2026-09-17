@@ -5,129 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>رزومه و سوابق من</title>
 <link rel="stylesheet" href="assets/style.css">
-<style>
-  body{
-    font-family: var(--font-main);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .home-hero{
-    width: 100%;
-    max-width: 900px;
-    padding: 90px 32px 50px 32px;
-    text-align: center;
-  }
-  .home-hero .eyebrow{
-    font-size: var(--fs-eyebrow);
-    font-weight: 700;
-    color: var(--line);
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-  }
-  .home-hero h1{
-    /* نام و عنوان خودت را اینجا جایگزین کن */
-    font-size: 46px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1.35;
-    margin-bottom: 18px;
-  }
-  .home-hero p{
-    font-size: var(--fs-body);
-    font-weight: 300;
-    color: var(--ink-soft);
-    line-height: 1.8;
-    max-width: 620px;
-    margin: 0 auto;
-  }
-
-  .chapters{
-    width: 100%;
-    max-width: 900px;
-    padding: 20px 32px 90px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-  .chapter-card{
-    display: flex;
-    align-items: center;
-    gap: 26px;
-    background: var(--bg);
-    border: 1px solid rgba(32,42,51,0.15);
-    border-radius: 20px;
-    padding: 30px 32px;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .chapter-card:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(32,42,51,0.12);
-  }
-  .chapter-num{
-    font-family: var(--font-accent);
-    font-style: italic;
-    font-size: 50px;
-    color: var(--line);
-    min-width: 64px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  .chapter-info{ flex: 1; text-align: right; }
-  .chapter-title{ font-size: var(--fs-heading); font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-  .chapter-desc{ font-size: var(--fs-body-sm); font-weight: 300; color: var(--ink-soft); }
-  .chapter-arrow{ font-size: 28px; color: var(--ink-soft); flex-shrink: 0; }
-
-  .home-footer{
-    padding: 0 32px 60px 32px;
-    font-size: var(--fs-tiny);
-    color: var(--ink-soft);
-    text-align: center;
-  }
-
-  @media (max-width: 560px){
-    .home-hero h1{ font-size: 34px; }
-    .chapter-card{ padding: 22px 20px; gap: 18px; }
-    .chapter-num{ font-size: 38px; min-width: 48px; }
-  }
-</style>
 </head>
-<body>
+<body class="home">
 
   <div class="home-hero">
     <div class="eyebrow">رزومه و سوابق حرفه‌ای</div>
-    <h1><!-- نام خودت را اینجا بنویس --></h1>
-    <p>مروری بر مسیر تحصیلی، سوابق شغلی و فعالیت‌های تدریس من — همان محتوایی که در استوری‌های اینستاگرام هم منتشر می‌شود.</p>
+    <h1>محمد دهقانی</h1>
+    <p> مروری بر مسیر تحصیلی، سوابق شغلی، پروژه‌ها، پژوهش‌ها و کلاس‌های برگزار شده</p>
   </div>
 
   <div class="chapters">
 
-    <a class="chapter-card" href="01-education/edu-1-bachelor.html">
-      <span class="chapter-num">۰۲</span>
+    <a class="chapter-card" href="01-Education/edu-1-bachelor.html">
+      <span class="chapter-num">۰۱</span>
       <div class="chapter-info">
         <div class="chapter-title">تحصیلات</div>
-        <div class="chapter-desc">کارشناسی، کارشناسی ارشد و دکتری — دانشگاه، سال‌ها و عنوان پایان‌نامه</div>
       </div>
       <span class="chapter-arrow">‹</span>
     </a>
 
     <a class="chapter-card" href="02-work-experience/work-1-overview.html">
-      <span class="chapter-num">۰۵</span>
+      <span class="chapter-num">۰۲</span>
       <div class="chapter-info">
         <div class="chapter-title">سوابق شغلی</div>
-        <div class="chapter-desc">بیش از ۱۰ سال تجربه، ۱۱ سازمان و مهارت‌هایی که در این مسیر ساخته شد</div>
       </div>
       <span class="chapter-arrow">‹</span>
     </a>
 
-    <a class="chapter-card" href="03-teaching/teach-1-overview.html">
-      <span class="chapter-num">۰۶</span>
+    <a class="chapter-card" href="03-Projects/proj-1-overview.html">
+      <span class="chapter-num">۰۳</span>
+      <div class="chapter-info">
+        <div class="chapter-title">پروژه‌ها</div>
+      </div>
+      <span class="chapter-arrow">‹</span>
+    </a>
+
+    <a class="chapter-card" href="04-teaching/teach-1-overview.html">
+      <span class="chapter-num">۰۴</span>
       <div class="chapter-info">
         <div class="chapter-title">تدریس و آموزش</div>
-        <div class="chapter-desc">۱۵ سال تدریس، ۲۲ دوره و کارگاه در ۱۴ مجموعه‌ی مختلف</div>
+      </div>
+      <span class="chapter-arrow">‹</span>
+    </a>
+
+    <a class="chapter-card" href="05-Papers/pub-0-overview-v2.html">
+      <span class="chapter-num">۰۵</span>
+      <div class="chapter-info">
+        <div class="chapter-title">مقالات و پژوهش‌ها</div>
+      </div>
+      <span class="chapter-arrow">‹</span>
+    </a>
+
+    <a class="chapter-card" href="06-Recommendation-Professional/letters-1-intro.html">
+      <span class="chapter-num">۰۶</span>
+      <div class="chapter-info">
+        <div class="chapter-title">توصیه‌نامه‌های حرفه‌ای</div>
+      </div>
+      <span class="chapter-arrow">‹</span>
+    </a>
+
+    <a class="chapter-card" href="07-Recommendation-Academic/mentor-1-intro.html">
+      <span class="chapter-num">۰۷</span>
+      <div class="chapter-info">
+        <div class="chapter-title">توصیه‌نامه‌های دانشگاهی</div>
+      </div>
+      <span class="chapter-arrow">‹</span>
+    </a>
+
+    <a class="chapter-card" href="08-Books/book-1-deep-learning.html">
+      <span class="chapter-num">۰۸</span>
+      <div class="chapter-info">
+        <div class="chapter-title">کتاب‌ها</div>
       </div>
       <span class="chapter-arrow">‹</span>
     </a>
