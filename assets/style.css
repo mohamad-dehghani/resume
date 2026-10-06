@@ -12,7 +12,9 @@
 
   /* ---------- فونت‌ها ---------- */
   --font-main: 'Vazirmatn', 'Times New Roman';
-  --font-accent: 'EB Garamond', 'Times New Roman';
+  /* Vazirmatn فقط به‌عنوان fallback برای اعداد فارسی اضافه شده تا ارقام فارسی
+     داخل عناصر با فونت لاتین (stat/yr/num/skill-num) به فونت پیش‌فرض سیستم سقوط نکنند. */
+  --font-accent: 'EB Garamond', 'Times New Roman', 'Vazirmatn';
 
   --fs-eyebrow:       40px;   
   --fs-h1:            65px;
@@ -125,7 +127,7 @@ html,body{ background: var(--page-backdrop); }
   font-size: 35px;
   letter-spacing: 3px;
   color: var(--ink-soft);
-  #font-weight: 300;
+  font-weight: 300;
 }
 
 .content-top{
@@ -387,8 +389,8 @@ html,body{ background: var(--page-backdrop); }
   align-items: center;
   border-top: 1px solid rgba(32,42,51,0.18);
 }
-.letter-footer .index{ font-family: var(--font-accent); font-style: italic; font-size: 26px; color: var(--ink-soft); letter-spacing:1px; direction: ltr; }
-.letter-footer .caption{ font-size: 16px; font-weight: 300; letter-spacing: 2px; color: var(--ink-soft); }
+.letter-footer .index{ font-family: var(--font-accent); font-style: italic; font-size: var(--fs-index); color: var(--ink-soft); letter-spacing:1px; direction: ltr; }
+.letter-footer .caption{ font-size: var(--fs-caption); font-weight: 300; letter-spacing: 2px; color: var(--ink-soft); }
 
 /* ---------- همکاری و اساتید (mentor pages) ---------- */
 .quote-mark{
@@ -518,10 +520,148 @@ body.home{
   text-align: center;
 }
 
+/* ---------- راه‌های ارتباطی (index) ---------- */
+.contact{
+  width: 100%;
+  max-width: 900px;
+  padding: 6px 32px 70px 32px;
+}
+.contact-head{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.contact-rule{ flex: 1; height: 1px; background: rgba(32,42,51,0.25); }
+.contact-title{
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--ink-soft);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.contact-item{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg);
+  border: 1px solid rgba(32,42,51,0.15);
+  border-radius: 20px;
+  padding: 20px 20px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.contact-item:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(32,42,51,0.12);
+}
+.contact-item .c-label{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--line);
+  letter-spacing: 1px;
+}
+.contact-item .c-value{
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--ink);
+  direction: ltr;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* فقط وقتی اسکریپت fit فعال نشده باشد (بدون جاوااسکریپت) اعمال می‌شود،
+   چون در حالت is-fit، بوم همیشه با عرض ۱۰۸۰ طراحی می‌شود و scale می‌خورد. */
 @media (max-width: 560px){
-  .home-hero h1{ font-size: 34px; }
-  .chapter-card{ padding: 22px 20px; gap: 18px; }
-  .chapter-num{ font-size: 38px; min-width: 48px; }
+  body:not(.is-fit) .home-hero h1{ font-size: 34px; }
+  body:not(.is-fit) .chapter-card{ padding: 22px 20px; gap: 18px; }
+  body:not(.is-fit) .chapter-num{ font-size: 38px; min-width: 48px; }
+  body:not(.is-fit) .contact-grid{ grid-template-columns: 1fr; }
+}
+
+/* =========================================================================
+   بوم صفحه‌ی اصلی (index) — تا مثل بقیه‌ی صفحات «تک‌صفحه» و بدون اسکرول باشد
+   ========================================================================= */
+.home-canvas{
+  background: var(--page-backdrop);
+  min-height: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================================
+   صفحه‌نمایش باریک (موبایل): فقط فضاهای عمودی را جمع‌وجور می‌کنیم تا محتوا
+   با مقیاس بزرگ‌تری در viewport جا شود.
+   * اندازه‌ها، فونت‌ها، رنگ‌ها و حاشیه‌های افقی دست‌نخورده می‌مانند.
+   * فقط روی عرض‌های کمتر از ۱۰۸۰ اعمال می‌شود ⇒ اسکرین‌شات استوری (۱۰۸۰×۱۹۲۰)
+     و نمای دسکتاپ دقیقاً مثل قبل می‌ماند.
+   ========================================================================= */
+@media (max-width: 1079px){
+  .content-top{ margin-top: calc(var(--content-margin-top) - 30px); }
+
+  .detail{ margin-top: 40px; }
+  .book-cover{ margin-top: 30px; }
+  .stats{ margin-top: 30px; padding-top: 24px; padding-bottom: 24px; }
+  .stats-primary{ margin-top: 40px; padding-top: 28px; padding-bottom: 28px; }
+  .stats-secondary{ margin-top: 30px; }
+  .section-label{ margin-top: 34px; }
+  .tags{ margin-top: 14px; gap: 10px; }
+  .topics{ margin-top: 18px; }
+  .topic-row{ padding: 12px 0; }
+  .orgs{ margin-top: 26px; }
+  .org-block{ padding: 12px 0; }
+  .org-head{ margin-bottom: 6px; }
+  .course-list .c{ padding: 4px 0; }
+  .table{ margin-top: 26px; }
+  .row{ padding: 14px 0; }
+  .skills{ margin-top: 32px; }
+  .skill-item{ padding: 18px 0; }
+  .list{ margin-top: 32px; }
+  .list-item{ padding: 10px 0; }
+  .current-list{ margin-top: 16px; }
+  .job-row{ padding: 18px 0; }
+  .proj{ padding: 16px 0; }
+  .desc{ margin-top: 26px; }
+  .desc p{ margin-bottom: 18px; }
+  .desc ul{ margin: 4px 0 20px 0; gap: 12px; }
+  .story{ margin-top: 22px; }
+  .doc{ margin-top: 30px; }
+  .doc-caption{ margin-top: 10px; }
+  .grid{ margin-top: 30px; gap: 20px; }
+  .quote-mark{ margin-bottom: 6px; }
+  .cta{ margin-top: 22px; }
+  .person-tag{ margin-top: 24px; padding-top: 20px; }
+  .closing{ margin-top: 20px; }
+
+  /* بلوک پایین صفحه (آیکن + شماره صفحه) */
+  .bottom{ padding-top: 26px; padding-bottom: 46px; }
+  .icon-row{ margin-bottom: 22px; }
+  .icon-box{ width: calc(var(--icon-size) * 0.72); height: calc(var(--icon-size) * 0.72); }
+  .icon-row .rule{ height: calc(var(--icon-rule-height) * 0.72); }
+  .letter-footer{ padding-top: 26px; padding-bottom: 40px; }
+}
+
+/* =========================================================================
+   حالت «تک‌صفحه» (بدون اسکرول) — توسط assets/fit.js فعال می‌شود.
+   بوم از جریان خارج می‌شود، زیر نوار ناوبری وسط‌چین می‌شود و به اندازه‌ی
+   viewport مقیاس می‌گیرد تا کل محتوا هم‌زمان دیده شود.
+   در پنجره‌ی دقیقاً ۱۰۸۰×۱۹۲۰ (اسکرین‌شات استوری) هیچ‌وقت فعال نمی‌شود.
+   ========================================================================= */
+body.is-fit{ overflow: hidden; }
+body.is-fit .site-nav{ position: relative; z-index: 2; }
+body.is-fit .canvas{
+  position: fixed;
+  top: var(--fit-top, 0px);
+  left: 50%;
+  margin-left: -540px;   /* ۱۰۸۰ ÷ ۲ — وسط‌چین شدن بومِ ۱۰۸۰ */
+  z-index: 1;
+  transform: scale(var(--fit-scale, 1));
+  transform-origin: top center;
 }
 
 /* ---------- فهرست پروژه‌ها (proj-1-overview) ---------- */

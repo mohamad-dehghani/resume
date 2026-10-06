@@ -1,0 +1,14 @@
+/* تفکیک‌شده از mentor-1-intro.html — فقط متغیرهای اختصاصی همین صفحه */
+:root{
+    --fs-eyebrow: 42px;
+    --fs-h1: 74px;
+    --fs-quote-mark: 150px;
+    --fs-story: 52px;
+    --story-margin-top: 50px;
+    --chapter-tag-top: 150px;
+    --chapter-tag-height: 130px;
+    --content-margin-top: 430px;
+    --icon-size: 180px;
+    --icon-rule-height: 180px;
+    --bottom-padding: 60px 90px 90px 90px;
+  }

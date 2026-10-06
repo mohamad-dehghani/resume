@@ -1,0 +1,15 @@
+/* تفکیک‌شده از pub-0-overview-v2.html — فقط متغیرهای اختصاصی همین صفحه */
+:root{
+    --fs-eyebrow: 22px;
+    --fs-h1: 54px;
+    --watermark-size: 480px;
+    --watermark-top: 60px;
+    --watermark-right: -10px;
+    --watermark-letter-spacing: -10px;
+    --chapter-tag-top: 150px;
+    --chapter-tag-height: 130px;
+    --content-margin-top: 430px;
+    --icon-size: 200px;
+    --icon-rule-height: 200px;
+    --bottom-padding: 80px 90px 90px 90px;
+  }

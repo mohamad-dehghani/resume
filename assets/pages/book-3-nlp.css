@@ -1,0 +1,14 @@
+/* تفکیک‌شده از book-3-nlp.html — فقط متغیرهای اختصاصی همین صفحه */
+:root{
+    --fs-eyebrow: 22px;
+    --fs-h1: 56px;
+    --fs-heading: 30px;
+    --fs-subtext: 24px;
+    --fs-tiny: 15px;
+    --chapter-tag-top: 150px;
+    --chapter-tag-height: 130px;
+    --content-margin-top: 430px;
+    --icon-size: 200px;
+    --icon-rule-height: 200px;
+    --bottom-padding: 80px 90px 90px 90px;
+  }

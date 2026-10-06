@@ -1,0 +1,13 @@
+/* تفکیک‌شده از teach-2-courses.html — فقط متغیرهای اختصاصی همین صفحه */
+:root{
+    --watermark-size: 300px;
+    --watermark-top: 90px;
+    --watermark-right: 5px;
+    --watermark-letter-spacing: -6px;
+    --chapter-tag-top: 120px;
+    --chapter-tag-height: 100px;
+    --content-margin-top: 310px;
+    --icon-size: 130px;
+    --icon-rule-height: 130px;
+    --bottom-padding: 50px 90px 80px 90px;
+  }
