@@ -1,11 +1,7 @@
 /* تفکیک‌شده از letters-1-intro.html — فقط متغیرهای اختصاصی همین صفحه */
 :root{
-    --fs-eyebrow: 21px;
-    --fs-h1: 48px;
     --watermark-size: 250px;
     --watermark-top: 80px;
     --watermark-right: 25px;
     --watermark-letter-spacing: -5px;
-    --chapter-tag-top: 120px;
-    --content-margin-top: 300px;
   }

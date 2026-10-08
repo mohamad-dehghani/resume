@@ -1,7 +1,5 @@
 /* تفکیک‌شده از proj-1-overview.html — فقط متغیرهای اختصاصی همین صفحه */
 :root{
-    --fs-eyebrow: 22px;
-    --fs-h1: 52px;
     --watermark-size: 400px;
     --watermark-top: 80px;
     --watermark-right: 10px;
@@ -9,5 +7,4 @@
     --icon-size: 170px;
     --icon-rule-height: 170px;
     --bottom-padding: 60px 90px 90px 90px;
-    --list-margin-top: 46px;
   }

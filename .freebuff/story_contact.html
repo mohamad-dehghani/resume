@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>story/ — ۳۲ خروجی ۱۰۸۰×۱۹۲۰</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; background:#14171c; color:#e9ecef; font:14px/1.6 system-ui, "Segoe UI", Tahoma; }
+  header { padding:18px 22px 10px; border-bottom:1px solid #2a2f38; position:sticky; top:0; background:#14171c; }
+  h1 { margin:0 0 6px; font-size:18px; font-weight:600; }
+  header p { margin:0; color:#98a2b3; font-size:13px; }
+  code { background:#232830; padding:1px 5px; border-radius:4px; font-size:12px; }
+  .grid { display:flex; flex-wrap:wrap; gap:12px; padding:16px 22px 40px; }
+  figure { margin:0; width:190px; }
+  a { display:block; }
+  img { width:190px; height:338px; object-fit:cover; display:block; border:1px solid #39404b; background:#0d0f12; }
+  figcaption { font-size:11px; padding-top:4px; color:#8b95a3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+</style>
+</head>
+<body>
+<header>
+  <h1>story/ — ۳۲ خروجی استوری ۱۰۸۰×۱۹۲۰</h1>
+  <p>بدون نوار منو و هدر سایت · JPEG کیفیت ۹۷ · روی هر تصویر بزنید تا تمام‌اندازه باز شود. گزارش: <code>story/export.json</code> و <code>story/verify.json</code></p>
+</header>
+<div class="grid" id="g"></div>
+<script>
+const files = ["00-index","01-edu-1-bachelor","02-edu-2-master","03-edu-3-phd","04-work-1-overview","05-work-2-history","06-work-3-skills","07-proj-1-overview","08-proj-2-health-assistant","09-proj-3-market-prediction","10-proj-4-profanity-detection","11-teach-1-overview","12-teach-2-courses","13-teach-3-courses part 2","14-pub-0-overview-v2","15-pub-1-distributed-dl-v2","16-pub-2-snp-bert-v2","17-pub-3-sustainable-energy-v2","18-pub-4-full-list","19-letters-1-intro","20-letters-2-lifeweb","21-letters-3-nikamooz","22-letters-4-aron","23-letters-5-zobahan","24-mentor-1-intro","25-mentor-2-mansouri","26-mentor-3-team-lead","27-mentor-4-vafaei","28-mentor-5-akhoondzadeh","29-book-1-deep-learning","30-book-2-ml","31-book-3-nlp"];
+document.getElementById('g').innerHTML = files.map(f =>
+  `<figure><a href="../story/${encodeURIComponent(f)}.jpg" target="_blank" rel="noopener"><img loading="lazy" src="../story/${encodeURIComponent(f)}.jpg" alt="${f}"></a><figcaption>${f}</figcaption></figure>`).join('');
+</script>
+</body>
+</html>

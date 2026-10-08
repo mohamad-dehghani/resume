@@ -1,17 +1,11 @@
 /* تفکیک‌شده از pub-3-sustainable-energy-v2.html — فقط متغیرهای اختصاصی همین صفحه */
 :root{
-    --fs-eyebrow: 22px;
+    --cover-padding: 26px;   /* تصویر پهن مقاله تا لبه‌ها بزرگ‌تر دیده شود */
     --fs-h1: 50px;
-    --fs-heading: 30px;
-    --fs-subtext: 24px;
-    --fs-tiny: 15px;
     --watermark-size: 260px;
     --watermark-top: 90px;
     --watermark-right: 30px;
     --watermark-letter-spacing: -4px;
-    --chapter-tag-top: 150px;
-    --chapter-tag-height: 130px;
-    --content-margin-top: 430px;
     --icon-size: 200px;
     --icon-rule-height: 200px;
     --bottom-padding: 70px 90px 90px 90px;
